@@ -127,12 +127,19 @@ function startQuiz(questions, timeLimit = 30) {
     console.log("-----------------------------");
   }
 
+  // Restzeit berechnen und anzeigen
+  const totalElapsed = (Date.now() - startTime) / 1000;
+  const remainingTimeAtEnd = timeLimit - totalElapsed;
+
   // Task 4: display the results
   console.log(`\nQuiz beendet!`);
   console.log(`Richtige Antworten: ${correctAnswers}`);
   console.log(`Falsche Antworten: ${incorrectAnswers}`);
   console.log(`Nicht beantwortet: ${unansweredQuestions}`);
   console.log(`Gesamtpunktzahl: ${score}`);
+  console.log(
+    `Restzeit am Ende: ${Math.max(0, remainingTimeAtEnd.toFixed(2))} Sekunden`
+  );
 }
 
 // Quiz starten
