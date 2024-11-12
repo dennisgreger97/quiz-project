@@ -88,7 +88,7 @@ const questions = [
 ];
 
 // Task 3: answer the questions
-function startQuiz(questions, timeLimit = 30) {
+function startQuiz(questions, timeLimit = 100) {
   let score = 0;
   let correctAnswers = 0;
   let incorrectAnswers = 0;
